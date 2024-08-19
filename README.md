@@ -3,6 +3,18 @@
 This project implements a simple web service wrapper around the Jasper
 Reports libraries for report and label generation in Specify 7.
 
+## Build for Docker
+
+After you pull the repository, you can run:
+```
+docker buildx build -t specifyconsortium/report-runner --platform linux/arm64/v8,linux/amd64 .
+```
+
+Once it successfully builds, run:
+```
+docker push specifyconsortium/report-runner:latest
+```
+
 ## Requirements
 
 - Java JDK >= 1.7 (never versions work too)
